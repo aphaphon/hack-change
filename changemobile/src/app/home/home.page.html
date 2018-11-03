@@ -20,10 +20,16 @@
   <button ion-button (click)="Submit()">Default</button>
 
   <ion-list>
+    <ion-item *ngIf="mss">
+      {{ mss }}
+    </ion-item>
+    <ion-item *ngIf="respChangeAmount>=0">
+      Change: {{ respChangeAmount }}
+    </ion-item>
     <ion-item *ngIf="thousand>0">
       1000 x {{ thousand }}
     </ion-item>
-    <ion-item *ngIf="fiveHundred>0" >
+    <ion-item *ngIf="fiveHundred>0">
       500 x {{ fiveHundred }}
     </ion-item>
     <ion-item *ngIf="oneHundred>0">

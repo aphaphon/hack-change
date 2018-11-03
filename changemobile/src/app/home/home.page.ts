@@ -24,7 +24,8 @@ export class HomePage {
   }
 
   private Submit() {
-
+    this.productPrice = Math.round(this.productPrice);
+    this.inputMoney = Math.round(this.inputMoney);
     if (this.productPrice <= 0 || this.inputMoney <= 0 || (this.productPrice > this.inputMoney)) {
       this.mss = "ใส่ข้อมูลไม่เหมาะสม";
       return;
