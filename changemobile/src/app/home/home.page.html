@@ -7,6 +7,39 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Product price</ion-label>
+      <ion-input type="text" [(ngModel)]="productPrice"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Input money</ion-label>
+      <ion-input type="text" [(ngModel)]="inputMoney"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="Submit()">Default</button>
+
+  <ion-list>
+    <ion-item *ngIf="thousand>0">
+      1000 x {{ thousand }}
+    </ion-item>
+    <ion-item *ngIf="fiveHundred>0" >
+      500 x {{ fiveHundred }}
+    </ion-item>
+    <ion-item *ngIf="oneHundred>0">
+      100 x {{ oneHundred }}
+    </ion-item>
+    <ion-item *ngIf="fifty>0">
+      50 x {{ fifty }}
+    </ion-item>
+    <ion-item *ngIf="twenty>0">
+      20 x {{ twenty }}
+    </ion-item>
+    <ion-item *ngIf="five>0">
+      5 x {{ five }}
+    </ion-item>
+    <ion-item *ngIf="one>0">
+      1 x {{ one }}
+    </ion-item>
+  </ion-list>
 </ion-content>
